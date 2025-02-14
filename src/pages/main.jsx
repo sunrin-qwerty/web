@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import qwerty from '../assets/qwerty.svg'
 import curriculum from '../assets/curriculum.svg'
 import './main.css'
+import arrow from '../assets/arrow-right.svg'
 
 import student1 from '../assets/student/김도현.png'
 import student2 from '../assets/student/염승엽.png'
@@ -135,9 +136,9 @@ function main() {
         <div className='curriculumlist-container'>
           <img src={curriculum} alt="Qwerty" className="curriculum-logo" />
           <ul className='curriculum-list'>
-            <li>HTML, CSS, Java Script</li>
-            <li>Node.JSm, React</li>
-            <li>Express.js, MySQL</li>
+            <li><img src={arrow} />HTML, CSS, JS</li>
+            <li><img src={arrow} />Node.JS, React</li>
+            <li><img src={arrow} />Express.js, MySQL</li>
           </ul>
           <a href='/curriculum' className='curriculum-btn'>
             커리큘럼 확인하기

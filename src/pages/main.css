@@ -217,7 +217,12 @@ body {
   list-style-type: none;
   padding: 0;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.4em;
+}
+
+.curriculum-list img {
+  height: 1em;
+  margin-right: 1em;
 }
 
 .curriculum-btn {
