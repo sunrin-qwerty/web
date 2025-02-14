@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './pages/error.jsx'
+import Curriculum from './pages/curriculum.jsx'
 import Main from './pages/main.jsx'
 
 const router = createBrowserRouter([
@@ -11,6 +12,11 @@ const router = createBrowserRouter([
     {
         path: "/apply",
         element: <ErrorPage />,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: "/curriculum",
+        element: <Curriculum />,
         errorElement: <ErrorPage />
     }
 ])

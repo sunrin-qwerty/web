@@ -58,7 +58,7 @@ function main() {
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
   }, [activeSection, transitioning]);
-
+  
   return (
     <div className="app-container">
       <header className="App-header">
@@ -226,7 +226,7 @@ function main() {
           </div>
         </div>
         <div className='apply-btn'>
-          <a href='#apply' onClick={(e) => handleNavClick(e, alert("아직 지원할수 없어요"))}>지원하기</a>
+          <a href='#apply' onClick={(e) => (e, alert("아직 지원할수 없어요"))}>지원하기</a>
         </div>
       </section>
     </div>

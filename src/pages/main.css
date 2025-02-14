@@ -207,6 +207,13 @@ body {
   margin-left: 20%;
 }
 
+.curriculum-logo{
+  height: 15em;
+  pointer-events: none;
+  position: relative;
+  filter: drop-shadow(0 0 4em #7E92F6);
+}
+
 .curriculum-list {
   text-align: left;
   list-style-type: none;
@@ -241,6 +248,7 @@ body {
   transform: scale(0.9);
   transition: all 0.5s ease;
 }
+
 .member {
   display: flex;
   align-items: center;
