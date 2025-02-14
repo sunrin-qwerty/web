@@ -167,10 +167,6 @@ body {
     font-size: 1em;
   }
 
-  .section {
-    padding: 3rem 1rem 1rem 1rem;
-  }
-
   .home, .curriculum {
     font-size: 1.2em;
   }
@@ -252,7 +248,6 @@ body {
     width: 100%;
   }
 }
-
 
 .card {
   padding: 2em;
@@ -448,71 +443,4 @@ body {
 
 .apply-btn a:hover {
   background-color: #5a6bb7;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 4rem 1rem 1rem 1rem;
-  }
-
-  .nav-links {
-    font-size: 3vh;
-    flex-direction: row;
-    gap: 2vh;
-    margin-right: 0;
-  }
-
-  .members-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .box {
-    width: 80%;
-  }
-
-  .apply-container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-logo {
-    margin-left: 5%;
-  }
-
-  .logo-container {
-    margin-left: 10%;
-  }
-
-  .curriculumlist-container {
-    margin-left: 10%;
-  }
-
-  .pages-logo, .curriculum-logo {
-    height: 10em;
-  }
-
-  .curriculum-list {
-    font-size: 1.2em;
-  }
-
-  .apply-btn a {
-    padding: 0.5rem 1rem;
-    font-size: 1em;
-  }
-
-  .section {
-    padding: 3rem 1rem 1rem 1rem;
-  }
-
-  .home, .curriculum {
-    font-size: 1.2em;
-  }
-
-  .box {
-    font-size: 1em;
-  }
-  .apply-btn {
-    margin-top: 1em;
-  }
 }
