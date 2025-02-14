@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import qwerty from './assets/qwerty.svg'
 import curriculum from './assets/curriculum.svg'
 
@@ -15,65 +15,128 @@ import student9 from './assets/student/쿼티짱.png'
 import './App.css'
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home');
+
+  // Handle smooth scrolling when clicking navigation links
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+    setActiveSection(sectionId);
+  };
+
+  // Update active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'curriculum', 'members', 'apply'];
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top >= -100 && rect.top <= 150;
+        }
+        return false;
+      });
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-        <header className="App-header">
-            <img src={qwerty} alt="Qwerty" className="header-logo" />
-            <ul className={"nav-links"}>
-                <li><a href="#">Home</a></li>
-                <li><a href="#ca">커리큘럼</a></li>
-                <li><a href="#">부원</a></li>
-                <li><a href="#">지원하기</a></li>
-            </ul>
-        </header>
+      <header className="App-header">
+        <img src={qwerty} alt="Qwerty" className="header-logo" />
+        <ul className="nav-links">
+          <li>
+            <a 
+              href="#home" 
+              onClick={(e) => handleNavClick(e, 'home')}
+              className={activeSection === 'home' ? 'active' : ''}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#curriculum" 
+              onClick={(e) => handleNavClick(e, 'curriculum')}
+              className={activeSection === 'curriculum' ? 'active' : ''}
+            >
+              커리큘럼
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#members" 
+              onClick={(e) => handleNavClick(e, 'members')}
+              className={activeSection === 'members' ? 'active' : ''}
+            >
+              부원
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#apply" 
+              onClick={(e) => handleNavClick(e, 'apply')}
+              className={activeSection === 'apply' ? 'active' : ''}
+            >
+              지원하기
+            </a>
+          </li>
+        </ul>
+      </header>
 
-        <section className="home">
-          <div className="container">
-                <h1>정제되고 체계적으로 <br /> <div className='qwerty-color'>QWERTY</div> 답게</h1>
-                <p>
-                  QWERTY 는 선린인터넷 고등학교의 일반 웹 동아리 입니다.<br />
-                  2023년에 신설 동아리로 보다 정제되고 체계적인<br />
-                  활동을 목표로 합니다.
-                </p>
-            </div>
+      <section id="home" className="home section">
+        <div className="container">
+          <h1>정제되고 체계적으로 <br /> <div className='qwerty-color'>QWERTY</div> 답게</h1>
+          <p>
+            QWERTY 는 선린인터넷 고등학교의 일반 웹 동아리 입니다.<br />
+            2023년에 신설 동아리로 보다 정제되고 체계적인<br />
+            활동을 목표로 합니다.
+          </p>
+        </div>
 
-            <div className='logo-container'>
-              <img src={qwerty} alt="Qwerty" className="pages-logo" />
-              <h1 className='qwerty-color'>QWERTY</h1>
-            </div>
-          
-        </section>
+        <div className='logo-container'>
+          <img src={qwerty} alt="Qwerty" className="pages-logo" />
+          <h1 className='qwerty-color'>QWERTY</h1>
+        </div>
+      </section>
 
-        <section className="curriculum">
+      <section id="curriculum" className="curriculum section">
+        <div className="curriculum-container">
+          <h1>풀스택 개발을 위한<br /><div className='qwerty-color'>QWERTY</div>만의 커리큘럼</h1>
+          <p>
+            QWERTY 에서는 웹 개발에 필요한 <br/>
+            다양한 언어와 프로그래밍 기술을 배웁니다.<br/>
+            <br/>
+            HTML 같은 기초적인 언어부터 Node.js, MySQL, React 등<br/>
+            여러 언어와 도구를 사용하여 웹개발자를 목표로 하는<br/>
+            친구들에게 도움을 줍니다.
+          </p>
+        </div>
 
-          <div className="curriculum-container">
-            <h1>풀스택 개발을 위한<br /><div className='qwerty-color'>QWERTY</div>만의 커리큘럼</h1>
-            <p>
-                QWERTY 에서는 웹 개발에 필요한 <br/>
-                다양한 언어와 프로그래밍 기술을 배웁니다.<br/>
-                <br/>
-                HTML 같은 기초적인 언어부터 Node.js, MySQL, React 등<br/>
-                여러 언어와 도구를 사용하여 웹개발자를 목표로 하는<br/>
-                친구들에게 도움을 줍니다.
-              </p>
-          </div>
+        <div className='curriculumlist-container'>
+          <img src={curriculum} alt="Qwerty" className="curriculum-logo" />
+          <ul className='curriculum-list'>
+            <li>HTML, CSS, Java Script</li>
+            <li>Node.JSm, React</li>
+            <li>Express.js, MySQL</li>
+          </ul>
+          <a href='#curriculum' className='curriculum-btn' onClick={(e) => handleNavClick(e, 'curriculum')}>
+            커리큘럼 확인하기
+          </a>
+        </div>
+      </section>
 
-          <div className='curriculumlist-container'>
-            <img src={curriculum} alt="Qwerty" className="curriculum-logo" />
-            <ul className='curriculum-list'>
-              <li>HTML, CSS, Java Script</li>
-              <li>Node.JSm, React</li>
-              <li>Express.js, MySQL</li>
-            </ul>
-            <a href='#' className='curriculum-btn'>커리큘럼 확인하기</a>
-          </div>
-        </section>
-
-        <section className="members">
-          <h1>부원 소개</h1>
-          <h2>QWERTY 6기</h2>
-          <div className="members-grid">
+      <section id="members" className="members section">
+        <h1>부원 소개</h1>
+        <h2>QWERTY 6기</h2>
+        <div className="members-grid">
             <div className="member">
               <img src={student1} alt="Student 1" />
               <div className="member-info">
@@ -136,17 +199,24 @@ function App() {
                 <h2>최진호</h2>
                 <p>최진호</p>
               </div>
-            </div>
+        </div>
+      </div>
+      </section>
+
+      <section id="apply" className="apply section">
+        <h1>문의 및 지원 안내</h1>
+        <div className='apply-container'>
+          <div className='box'>
+            <h2>@sunrin_qwerty</h2>
           </div>
-
-        </section>
-
-        <section className="apply">
-          <h1>문의 및 지원 안내</h1>
-          
-        </section>
-
-
+          <div className='box'>
+            <h2>?월 ?일 ~ ?월 ?일</h2>
+          </div>
+        </div>
+        <div className='apply-btn'>
+          <a href='/404' onClick={(e) => handleNavClick(e, 'apply')}>지원하기</a>
+        </div>
+      </section>
     </>
   )
 }
