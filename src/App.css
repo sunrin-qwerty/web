@@ -40,3 +40,89 @@
 .read-the-docs {
   color: #888;
 }
+
+.header-logo {
+  height: 3em;
+  pointer-events: none;
+  color: white;
+  margin-left: 15%;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 4.5em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 5vh;
+  margin-right: 15%;
+  list-style-type: none;
+  font-size: 1em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.qwerty-color {
+  font-weight: bold;
+  color: #7E92F6;
+  display: inline;
+}
+
+.home {
+  font-size: 1.5em;
+}
+
+.container {
+  text-align: left;
+  float: left;
+  width: 70%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.pages-logo {
+  height: 15em;
+  pointer-events: none;
+  margin-left: 10%;
+  position: relative;
+}
+
+.pages-logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20em;
+  height: 20em;
+  background-color: rgba(126, 146, 246, 1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
