@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import qwerty from './assets/qwerty.svg'
+import curriculum from './assets/curriculum.svg'
 import './App.css'
 
 function App() {
@@ -30,6 +31,32 @@ function App() {
               <img src={qwerty} alt="Qwerty" className="pages-logo" />
               <h1 className='qwerty-color'>QWERTY</h1>
             </div>
+          
+        </section>
+
+        <section className="curriculum">
+
+          <div className="container">
+            <h1>풀스택 개발을 위한<br /><div className='qwerty-color'>QWERTY</div>만의 커리큘럼</h1>
+            <p>
+                QWERTY 에서는 웹 개발에 필요한 <br/>
+                다양한 언어와 프로그래밍 기술을 배웁니다.<br/>
+                <br/>
+                HTML 같은 기초적인 언어부터 Node.js, MySQL, React 등<br/>
+                여러 언어와 도구를 사용하여 웹개발자를 목표로 하는<br/>
+                친구들에게 도움을 줍니다.
+              </p>
+          </div>
+
+          <div className='curriculum-container'>
+            <img src={curriculum} alt="Qwerty" className="curriculum-logo" />
+            <ul className='curriculum-list'>
+              <li>HTML, CSS, Java Script</li>
+              <li>Node.JSm, React</li>
+              <li>Express.js, MySQL</li>
+            </ul>
+            <a href='#' className='curriculum-btn'>커리큘럼 확인하기</a>
+          </div>
         </section>
 
     </>
