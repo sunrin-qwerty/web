@@ -381,4 +381,7 @@ body {
   .box {
     font-size: 1em;
   }
+  .apply-btn {
+    margin-top: 1em;
+  }
 }
