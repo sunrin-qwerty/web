@@ -91,7 +91,6 @@
   float: left;
   height: 100%;
   white-space: nowrap;
-  
 }
 
 .logo-container {
@@ -117,7 +116,19 @@
 }
 
 
+.curriculum {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 .curriculum-container {
+  text-align: left;
+  float: left;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.curriculumlist-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -145,4 +156,33 @@
   color: #7E92F6;
   text-decoration: underline;
   text-decoration-color: #7E92F6;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.member img {
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.member-info {
+  margin: 0 auto;
 }
