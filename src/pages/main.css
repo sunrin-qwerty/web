@@ -6,7 +6,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow-: hidden;
 }
 
 .section {
@@ -59,6 +58,14 @@ body {
   backdrop-filter: blur(5px);
 }
 
+.nav-links {
+  display: flex;
+  gap: 5vh;
+  margin-right: 15%;
+  list-style-type: none;
+  font-size: 1em;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -86,7 +93,6 @@ body {
   background-color: #7E92F6;
 }
 
-/* Existing styles */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -135,14 +141,6 @@ body {
   pointer-events: none;
   color: white;
   margin-left: 15%;
-}
-
-.nav-links {
-  display: flex;
-  gap: 5vh;
-  margin-right: 15%;
-  list-style-type: none;
-  font-size: 1em;
 }
 
 .qwerty-color {
@@ -263,6 +261,7 @@ body {
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.5s ease;
+  height: 100px; /* Adjust height */
 }
 
 .member-info {
@@ -318,4 +317,68 @@ body {
 
 .apply-btn a:hover {
   background-color: #5a6bb7;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+
+  .nav-links {
+    font-size: 3vh;
+    flex-direction: row;
+    gap: 2vh;
+    margin-right: 0;
+  }
+
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .apply-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    margin-left: 5%;
+  }
+
+  .logo-container {
+    margin-left: 10%;
+  }
+
+  .curriculumlist-container {
+    margin-left: 10%;
+  }
+
+  .pages-logo, .curriculum-logo {
+    height: 10em;
+  }
+
+  .curriculum-list {
+    font-size: 1.2em;
+  }
+
+  .apply-btn a {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
+
+  .section {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .home, .curriculum {
+    font-size: 1.2em;
+  }
+
+  .box {
+    font-size: 1em;
+  }
 }
