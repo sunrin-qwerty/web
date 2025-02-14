@@ -122,11 +122,137 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+
+  .nav-links {
+    font-size: 3vh;
+    flex-direction: row;
+    gap: 2vh;
+    margin-right: 0;
+  }
+
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .apply-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 4em;
+  }
+
+  .header-logo {
+    height: 2em;
+  }
+
+  .pages-logo, .curriculum-logo {
+    height: 12em;
+  }
+
+  .curriculum-list {
+    font-size: 1.2em;
+  }
+
+  .apply-btn a {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
+
+  .section {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .home, .curriculum {
+    font-size: 1.2em;
+  }
+
+  .box {
+    font-size: 1em;
+  }
+
+  .apply-btn {
+    margin-top: 1em;
   }
 }
+
+@media (max-width: 480px) {
+  .header-logo {
+    margin-left: 5%;
+  }
+
+  .logo-container {
+    margin-left: 10%;
+  }
+
+  .curriculumlist-container {
+    margin-left: 10%;
+  }
+
+  .pages-logo, .curriculum-logo {
+    height: 10em;
+  }
+
+  .curriculum-list {
+    font-size: 1.2em;
+  }
+
+  .apply-btn a {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
+
+  .section {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .home, .curriculum {
+    font-size: 1.2em;
+  }
+
+  .box {
+    font-size: 1em;
+  }
+
+  .apply-btn {
+    margin-top: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .nav-links a {
+    padding: 0.5rem;
+  }
+
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member {
+    font-size: 0.8em;
+    padding: 0.5rem;
+  }
+
+  .apply-container {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+  }
+}
+
 
 .card {
   padding: 2em;
