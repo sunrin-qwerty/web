@@ -82,12 +82,12 @@
 
 .home {
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .container {
   text-align: left;
   float: left;
-  width: 70%;
   height: 100%;
   white-space: nowrap;
 }
@@ -97,7 +97,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
   height: 100%;
   text-align: center;
 }
@@ -110,19 +109,6 @@
 .pages-logo {
   height: 15em;
   pointer-events: none;
-  margin-left: 10%;
   position: relative;
-}
-
-.pages-logo::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20em;
-  height: 20em;
-  background-color: rgba(126, 146, 246, 1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+  filter: drop-shadow(0 0 4em #7E92F6);
 }

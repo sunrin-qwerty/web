@@ -18,7 +18,7 @@ function App() {
 
         <section className="home">
           <div className="container">
-                <h1>정제되고 체계적으로. <br /> <div className='qwerty-color'>QWERTY</div> 답게.</h1>
+                <h1>정제되고 체계적으로 <br /> <div className='qwerty-color'>QWERTY</div> 답게</h1>
                 <p>
                   QWERTY 는 선린인터넷 고등학교의 일반 웹 동아리 입니다.<br />
                   2023년에 신설 동아리로 보다 정제되고 체계적인<br />
