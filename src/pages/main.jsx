@@ -229,6 +229,9 @@ function main() {
         <div className='apply-btn'>
           <a href='#apply' onClick={(e) => (e, alert("아직 지원할수 없어요"))}>지원하기</a>
         </div>
+        <footer>
+          <p>©2025 kimrasng. All rights reserved.</p>
+        </footer>
       </section>
     </div>
   )
