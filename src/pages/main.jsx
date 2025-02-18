@@ -1,65 +1,65 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import qwerty from '../assets/qwerty.svg';
-import curriculum from '../assets/curriculum.svg';
-import './main.css';
-import arrow from '../assets/arrow-right.svg';
-import studentList from '../assets/student.json';
+import { useState, useEffect } from 'react'
+import qwerty from '../assets/qwerty.svg'
+import curriculum from '../assets/curriculum.svg'
+import './main.css'
+import arrow from '../assets/arrow-right.svg'
+import studentList from '../assets/student.json'
 
 function Main() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [transitioning, setTransitioning] = useState(false);
-  const [students, setStudents] = useState([]);
+  const [activeSection, setActiveSection] = useState('home')
+  const [transitioning, setTransitioning] = useState(false)
+  const [students, setStudents] = useState([])
 
-  const sections = useMemo(() => ['home', 'curriculum', 'members', 'apply'], []);
+  const sections = ['home', 'curriculum', 'members', 'apply']
 
   useEffect(() => {
-    setStudents(studentList);
-  }, []);
+    setStudents(studentList)
+  }, [])
 
-  const handleWheel = useCallback((e) => {
-    if (transitioning) return;
+  const handleWheel = (e) => {
+    if (transitioning) return
 
-    const currentIndex = sections.indexOf(activeSection);
-    const direction = e.deltaY > 0 ? 1 : -1;
-    const nextIndex = currentIndex + direction;
+    const currentIndex = sections.indexOf(activeSection)
+    const direction = e.deltaY > 0 ? 1 : -1
+    const nextIndex = currentIndex + direction
 
     if (nextIndex >= 0 && nextIndex < sections.length) {
-      setTransitioning(true);
-      const nextSection = sections[nextIndex];
-      setActiveSection(nextSection);
-      document.getElementById(nextSection).scrollIntoView({ behavior: 'smooth' });
+      setTransitioning(true)
+      const nextSection = sections[nextIndex]
+      setActiveSection(nextSection)
+      document.getElementById(nextSection).scrollIntoView({ behavior: 'smooth' })
 
       setTimeout(() => {
-        setTransitioning(false);
-      }, 1000);
+        setTransitioning(false)
+      }, 1000)
     }
-  }, [activeSection, sections, transitioning]);
+  }
 
-  const handleNavClick = useCallback((e, sectionId) => {
-    e.preventDefault();
-    if (transitioning) return;
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault()
+    if (transitioning) return
 
-    setTransitioning(true);
-    setActiveSection(sectionId);
-    const sectionElement = document.getElementById(sectionId);
+    setTransitioning(true)
+    setActiveSection(sectionId)
+    const sectionElement = document.getElementById(sectionId)
     if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      sectionElement.scrollIntoView({ behavior: 'smooth' })
     }
 
     setTimeout(() => {
-      setTransitioning(false);
-    }, 1000);
-  }, [transitioning]);
+      setTransitioning(false)
+    }, 1000)
+  }
 
   useEffect(() => {
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    return () => window.removeEventListener('wheel', handleWheel);
-  }, [handleWheel]);
+    window.addEventListener('wheel', handleWheel, { passive: false })
+    return () => window.removeEventListener('wheel', handleWheel)
+  }, [activeSection, transitioning])
 
   return (
     <div className="app-container">
       <header className="App-header">
-        <img src={qwerty} alt="Qwerty Logo" className="header-logo" />
+        <img src={qwerty} alt="Qwerty" className="header-logo" />
         <ul className="nav-links">
           {sections.map((section) => (
             <li key={section}>
@@ -88,7 +88,7 @@ function Main() {
         </div>
 
         <div className="logo-container">
-          <img src={qwerty} alt="Qwerty Logo" className="pages-logo" />
+          <img src={qwerty} alt="Qwerty" className="pages-logo" />
           <h1 className="qwerty-color">QWERTY</h1>
         </div>
       </section>
@@ -110,7 +110,7 @@ function Main() {
         </div>
 
         <div className="curriculumlist-container">
-          <img src={curriculum} alt="Curriculum Logo" className="curriculum-logo" />
+          <img src={curriculum} alt="Qwerty" className="curriculum-logo" />
           <ul className="curriculum-list">
             <li>
               <img src={arrow} alt="Arrow" />
@@ -137,7 +137,7 @@ function Main() {
         <div className="members-grid">
           {students.map((student, index) => (
             <div className="member" key={index}>
-              <img src={student.image} alt={`${student.name} 사진`} />
+              <img src={student.image} alt={student.name} />
               <div className="member-info">
                 <h2>{student.name}</h2>
                 <p dangerouslySetInnerHTML={{ __html: student.role }} />
@@ -167,7 +167,7 @@ function Main() {
         </footer>
       </section>
     </div>
-  );
+  )
 }
 
-export default Main;
+export default Main

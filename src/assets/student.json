@@ -2,46 +2,46 @@
     {
         "name": "김도현",
         "role": "backend developer",
-        "image": "/assets/student/김도현.png"
+        "image": "/student/김도현.png"
     },
     {
         "name": "염승엽",
         "role": "부장",
-        "image": "/assets/student/염승엽.png"
+        "image": "/student/염승엽.png"
     },
     {
         "name": "정여진",
         "role": "부부장",
-        "image": "/assets/student/정여진.png"
+        "image": "/student/쿼티짱.png"
     },
     {
         "name": "최진호",
         "role": "buwon",
-        "image": "/assets/student/최진호.png"
+        "image": "/student/최진호.png"
     },
     {
         "name": "남윤지",
         "role": "게임만드는<br/>피곤한 그림쟁이",
-        "image": "/assets/student/남윤지.png"
+        "image": "/student/남윤지.png"
     },
     {
         "name": "김동완",
         "role": "김동완",
-        "image": "/assets/student/김동완.png"
+        "image": "/student/쿼티짱.png"
     },
     {
         "name": "이동규",
         "role": "이동규",
-        "image": "/assets/student/이동규.png"
+        "image": "/student/쿼티짱.png"
     },
     {
         "name": "김나우",
         "role": "김나우",
-        "image": "/assets/student/김나우.png"
+        "image": "/student/쿼티짱.png"
     },
     {
-        "name": "최진호",
-        "role": "최진호",
-        "image": "/assets/student/최진호.png"
+        "name": "김세은",
+        "role": "김세은",
+        "image": "/student/쿼티짱.png"
     }
 ]
