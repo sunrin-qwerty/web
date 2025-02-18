@@ -1,0 +1,47 @@
+[
+    {
+        "name": "김도현",
+        "role": "backend developer",
+        "image": "김도현.png"
+    },
+    {
+        "name": "염승엽",
+        "role": "부장",
+        "image": "염승엽.png"
+    },
+    {
+        "name": "정여진",
+        "role": "부부장",
+        "image": "정여진.png"
+    },
+    {
+        "name": "최진호",
+        "role": "buwon",
+        "image": "최진호.png"
+    },
+    {
+        "name": "남윤지",
+        "role": "게임만드는<br/>피곤한 그림쟁이",
+        "image": "남윤지.png"
+    },
+    {
+        "name": "김동완",
+        "role": "김동완",
+        "image": "김동완.png"
+    },
+    {
+        "name": "이동규",
+        "role": "이동규",
+        "image": "이동규.png"
+    },
+    {
+        "name": "김나우",
+        "role": "김나우",
+        "image": "김나우.png"
+    },
+    {
+        "name": "최진호",
+        "role": "최진호",
+        "image": "최진호.png"
+    }
+]
