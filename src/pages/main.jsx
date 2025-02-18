@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import qwerty from '../assets/qwerty.svg';
 import curriculum from '../assets/curriculum.svg';
 import './main.css';
@@ -10,13 +10,13 @@ function Main() {
   const [transitioning, setTransitioning] = useState(false);
   const [students, setStudents] = useState([]);
 
-  const sections = ['home', 'curriculum', 'members', 'apply'];
+  const sections = useMemo(() => ['home', 'curriculum', 'members', 'apply'], []);
 
   useEffect(() => {
     setStudents(studentList);
   }, []);
 
-  const handleWheel = (e) => {
+  const handleWheel = useCallback((e) => {
     if (transitioning) return;
 
     const currentIndex = sections.indexOf(activeSection);
@@ -33,9 +33,9 @@ function Main() {
         setTransitioning(false);
       }, 1000);
     }
-  };
+  }, [activeSection, sections, transitioning]);
 
-  const handleNavClick = (e, sectionId) => {
+  const handleNavClick = useCallback((e, sectionId) => {
     e.preventDefault();
     if (transitioning) return;
 
@@ -49,17 +49,17 @@ function Main() {
     setTimeout(() => {
       setTransitioning(false);
     }, 1000);
-  };
+  }, [transitioning]);
 
   useEffect(() => {
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
-  }, [activeSection, transitioning]);
+  }, [handleWheel]);
 
   return (
     <div className="app-container">
       <header className="App-header">
-        <img src={qwerty} alt="Qwerty" className="header-logo" />
+        <img src={qwerty} alt="Qwerty Logo" className="header-logo" />
         <ul className="nav-links">
           {sections.map((section) => (
             <li key={section}>
@@ -88,7 +88,7 @@ function Main() {
         </div>
 
         <div className="logo-container">
-          <img src={qwerty} alt="Qwerty" className="pages-logo" />
+          <img src={qwerty} alt="Qwerty Logo" className="pages-logo" />
           <h1 className="qwerty-color">QWERTY</h1>
         </div>
       </section>
@@ -110,7 +110,7 @@ function Main() {
         </div>
 
         <div className="curriculumlist-container">
-          <img src={curriculum} alt="Qwerty" className="curriculum-logo" />
+          <img src={curriculum} alt="Curriculum Logo" className="curriculum-logo" />
           <ul className="curriculum-list">
             <li>
               <img src={arrow} alt="Arrow" />
@@ -137,7 +137,7 @@ function Main() {
         <div className="members-grid">
           {students.map((student, index) => (
             <div className="member" key={index}>
-              <img src={student.image} alt={student.name} />
+              <img src={student.image} alt={`${student.name} 사진`} />
               <div className="member-info">
                 <h2>{student.name}</h2>
                 <p dangerouslySetInnerHTML={{ __html: student.role }} />
