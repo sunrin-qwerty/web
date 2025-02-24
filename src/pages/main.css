@@ -219,12 +219,12 @@ body {
   font-weight: bold;
   padding: 1rem;
   text-align: left;
-  border-radius: 1rem;
+  border-radius: 2rem;
   text-align: center;
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.5s ease;
-  height: 100px;
+  height: 10vh;
 }
 
 .member-info {
@@ -232,6 +232,7 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+  line-height: 1.2;
 }
 
 .apply {
@@ -247,7 +248,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .box {
@@ -257,7 +258,7 @@ body {
   background-color: #d9d9d9;
   color: black;
   padding: 2rem;
-  width: 40%;
+  width: 50%;
   margin: 1rem;
   border-radius: 1rem;
   font-size: 1.2em;
@@ -273,7 +274,7 @@ body {
   background-color: #7E92F6;
   color: white;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   font-size: 1.2em;
   transition: background-color 0.3s;
 }
@@ -293,16 +294,20 @@ footer {
   left: 0;
 }
 
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
-  .section {
-    padding: 4rem 1rem 1rem 1rem;
+  html {
+    overflow-y: auto;
   }
 
   .nav-links {
-    font-size: 3vh;
-    flex-direction: row;
-    gap: 2vh;
+    flex-direction: column;
+    gap: 1rem;
     margin-right: 0;
+  }
+
+  .header-logo, .logo-container, .curriculumlist-container {
+    margin-left: 0;
   }
 
   .members-grid {
@@ -316,47 +321,29 @@ footer {
   .apply-container {
     flex-direction: column;
   }
-}
-
-@media (max-width: 480px) {
-  .header-logo {
-    margin-left: 5%;
-  }
-
-  .logo-container {
-    margin-left: 10%;
-  }
-
-  .curriculumlist-container {
-    margin-left: 10%;
-  }
 
   .pages-logo, .curriculum-logo {
     height: 10em;
   }
 
-  .curriculum-list {
-    font-size: 1.2em;
+  .member {
+    font-size: 0.8em;
+    padding: 0.5rem;
+    height: auto;
   }
 
   .apply-btn a {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1em;
   }
 
-  .section {
-    padding: 3rem 1rem 1rem 1rem;
+  .curriculum-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .home, .curriculum {
-    font-size: 1.2em;
-  }
-
-  .box {
-    font-size: 1em;
-  }
-
-  .apply-btn {
-    margin-top: 1em;
+  .curriculumlist-container {
+    margin-left: 0;
+    width: 100%;
   }
 }

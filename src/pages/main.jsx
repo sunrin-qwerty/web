@@ -163,7 +163,7 @@ function Main() {
           </a>
         </div>
         <footer>
-          <p>©2025 kimrasng. All rights reserved.</p>
+          <p>©2025 OpenAI, Claude</p>
         </footer>
       </section>
     </div>
