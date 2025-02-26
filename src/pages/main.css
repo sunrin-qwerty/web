@@ -96,7 +96,6 @@ body {
 }
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -294,20 +293,20 @@ footer {
   left: 0;
 }
 
-/* Media Queries for Mobile */
 @media (max-width: 768px) {
-  html {
-    overflow-y: auto;
-  }
-
   .nav-links {
-    flex-direction: column;
+    flex-direction: row; /* Keep horizontal alignment */
     gap: 1rem;
     margin-right: 0;
   }
 
-  .header-logo, .logo-container, .curriculumlist-container {
-    margin-left: 0;
+  .header-logo {
+    margin-left: 5%;
+    height: 2.5em; /* Adjusted height */
+  }
+
+  .logo-container, .curriculumlist-container {
+    margin-left: 5%;
   }
 
   .members-grid {
@@ -315,35 +314,50 @@ footer {
   }
 
   .box {
-    width: 80%;
-  }
-
-  .apply-container {
-    flex-direction: column;
-  }
-
-  .pages-logo, .curriculum-logo {
-    height: 10em;
-  }
-
-  .member {
-    font-size: 0.8em;
-    padding: 0.5rem;
-    height: auto;
+    width: 90%;
+    padding: 1.5rem; /* Adjusted padding */
+    font-size: 1em; /* Adjusted font size */
   }
 
   .apply-btn a {
-    padding: 0.8rem 1.5rem;
-    font-size: 1em;
+    padding: 0.8rem 1.5rem; /* Adjusted padding */
+    font-size: 1em; /* Adjusted font size */
   }
 
-  .curriculum-container {
+  .apply-container {
+    flex-direction: column; /* Change to vertical layout */
+  }
+
+  .section {
     flex-direction: column;
-    align-items: center;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    font-size: 0.8em;
   }
 
-  .curriculumlist-container {
-    margin-left: 0;
-    width: 100%;
+  .header-logo {
+    height: 2em; /* Adjusted height */
+  }
+
+  .pages-logo, .curriculum-logo {
+    height: 8em; /* Adjusted height */
+  }
+
+  .box {
+    padding: 1rem; /* Adjusted padding */
+    font-size: 0.9em; /* Adjusted font size */
+  }
+
+  .apply-btn a {
+    padding: 0.5rem 1rem; /* Adjusted padding */
+    font-size: 0.9em; /* Adjusted font size */
+  }
+
+  .apply-container {
+    flex-direction: column; /* Change to vertical layout */
   }
 }
