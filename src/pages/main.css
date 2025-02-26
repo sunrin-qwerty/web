@@ -205,7 +205,7 @@ body {
   gap: 1rem;
   margin-top: 1rem;
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(1);
   transition: all 0.5s ease;
 }
 
@@ -332,6 +332,10 @@ footer {
     flex-direction: column;
     overflow-y: auto;
   }
+
+  .section .container {
+    margin-bottom: 2rem; /* Add margin for better spacing */
+  }
 }
 
 @media (max-width: 480px) {
@@ -359,5 +363,9 @@ footer {
 
   .apply-container {
     flex-direction: column; /* Change to vertical layout */
+  }
+
+  .section .container {
+    margin-bottom: 2rem; /* Add margin for better spacing */
   }
 }
