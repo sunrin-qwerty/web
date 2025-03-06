@@ -306,8 +306,8 @@ body {
 
 @media (max-width: 768px) {
   .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 1rem;
     margin-right: 0;
   }
 
@@ -351,25 +351,25 @@ body {
 
 @media (max-width: 480px) {
   .nav-links {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   .header-logo {
-    height: 1.5em;
+    height: 2em;
   }
 
   .pages-logo, .curriculum-logo {
-    height: 6em;
+    height: 8em;
   }
 
   .box {
-    padding: 0.8rem;
-    font-size: 0.8em;
+    padding: 1rem;
+    font-size: 0.9em;
   }
 
   .apply-btn a {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8em;
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
   }
 
   .apply-container {
@@ -377,15 +377,6 @@ body {
   }
 
   .section .container {
-    margin-bottom: 1.5rem;
-  }
-
-  .curriculum-list {
-    font-size: 1em;
-  }
-
-  .member {
-    font-size: 0.8em;
-    padding: 0.8rem;
+    margin-bottom: 2rem;
   }
 }
