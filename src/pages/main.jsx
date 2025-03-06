@@ -162,9 +162,6 @@ function Main() {
             지원하기
           </a>
         </div>
-        <footer>
-          <p>©2025 OpenAI, Claude</p>
-        </footer>
       </section>
     </div>
   )
