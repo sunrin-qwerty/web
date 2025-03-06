@@ -4,6 +4,7 @@ import curriculum from '../assets/curriculum.svg'
 import './main.css'
 import arrow from '../assets/arrow-right.svg'
 import studentList from '../assets/student.json'
+import { Link } from 'react-router-dom'
 
 function Main() {
   const [activeSection, setActiveSection] = useState('home')
@@ -158,7 +159,7 @@ function Main() {
           </div>
         </div>
         <div className="apply-btn">
-          <a href="#apply" onClick={(e) => (e, alert('아직 지원할수 없어요'))}>
+          <a href="#apply" onClick={(e) => (e, Link("https://www.youtube.com/watch?v=dQw4w9WgXcQ"))}>
             지원하기
           </a>
         </div>
