@@ -159,9 +159,14 @@ function Main() {
           </div>
         </div>
         <div className="apply-btn">
-          <a href="#apply" onClick={(e) => (e, Link("https://www.youtube.com/watch?v=dQw4w9WgXcQ"))}>
-            지원하기
-          </a>
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
+          지원하기
+        </a>
         </div>
       </section>
     </div>
