@@ -155,12 +155,12 @@ function Main() {
             <h2>@sunrin_qwerty</h2>
           </div>
           <div className="box">
-            <h2>3월 07일 ~ 3월 18일</h2>
+            <h2>3월 07일 ~ 3월 14일</h2>
           </div>
         </div>
         <div className="apply-btn">
         <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href="https://forms.gle/ERmTkPAvhEaNCdGz5"
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
