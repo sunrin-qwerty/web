@@ -126,9 +126,6 @@ function Main() {
               Express.js, MySQL
             </li>
           </ul>
-          <a href="/curriculum" className="curriculum-btn">
-            커리큘럼 확인하기
-          </a>
         </div>
       </section>
 
