@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  overflow-y: hidden;
 }
 
 body {
@@ -287,25 +286,6 @@ body {
 
 @media (max-width: 1024px) {
   .nav-links {
-    gap: 1rem;
-    margin-right: 10%;
-  }
-
-  .header-logo {
-    margin-left: 10%;
-  }
-
-  .logo-container, .curriculumlist-container {
-    margin-left: 10%;
-  }
-
-  .curriculum-list {
-    font-size: 1.2em;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
     flex-direction: row;
     gap: 1rem;
     margin-right: 0;
@@ -342,38 +322,6 @@ body {
   .section {
     flex-direction: column;
     overflow-y: auto;
-  }
-
-  .section .container {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-links {
-    font-size: 0.8em;
-  }
-
-  .header-logo {
-    height: 2em;
-  }
-
-  .pages-logo, .curriculum-logo {
-    height: 8em;
-  }
-
-  .box {
-    padding: 1rem;
-    font-size: 0.9em;
-  }
-
-  .apply-btn a {
-    padding: 0.5rem 1rem;
-    font-size: 0.9em;
-  }
-
-  .apply-container {
-    flex-direction: column;
   }
 
   .section .container {
