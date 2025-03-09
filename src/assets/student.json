@@ -1,7 +1,7 @@
 [
     {
         "name": "김도현",
-        "role": "backend developer",
+        "role": "부부장<br />backend developer",
         "image": "/student/김도현.png"
     },
     {
@@ -36,8 +36,8 @@
     },
     {
         "name": "김나우",
-        "role": "김나우",
-        "image": "/student/쿼티짱.png"
+        "role": "아무것도 안함",
+        "image": "/student/김나우.png"
     },
     {
         "name": "김세은",
