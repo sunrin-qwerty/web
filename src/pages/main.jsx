@@ -152,7 +152,7 @@ function Main() {
             <h2>@sunrin_qwerty</h2>
           </div>
           <div className="box">
-            <h2>3월 19일 ~ 3월 22일</h2>
+            <h2>3월 19일 ~ 3월 23일 19시</h2>
           </div>
         </div>
         <div className="apply-btn">
